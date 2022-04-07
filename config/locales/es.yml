@@ -1,16 +1,19 @@
 ---
 es:
+  activerecord:
+    models:
+      category:
+        one: Categoría
+        others: Categorías
   categories:
     form:
       description: Descripción
       name: Nombre
       submit: Enviar
     new_category: Nueva categoría
-  activerecord:
-    models:
-      category:
-        one: Categoría
-        others: Categorías
   common:
-    back: 'Atrás'
+    back: Atrás
   hello: Hello world
+  task:
+    errors:
+      invalid_due_date: La fecha no puede estar en el pasado

@@ -1,9 +1,19 @@
 ---
 en:
+  activerecord:
+    models:
+      category:
+        one: Categoría
+        others: Categorías
   categories:
     form:
       description: Description
       name: Name
       submit: Submit
     new_category: Nueva categoría
+  common:
+    back: Atrás
   hello: Hello world
+  task:
+    errors:
+      invalid_due_date: Invalid due date
