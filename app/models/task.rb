@@ -24,10 +24,10 @@
 class Task < ApplicationRecord
   belongs_to :category
   belongs_to :owner, class_name: 'User'
-  has_many :participating_user, class_name: 'Participant'
-  has_many :participants, through: :participating_user, source: :user
+  has_many :participating_users, class_name: 'Participant'
+  has_many :participants, through: :participating_users, source: :user
 
-  validates :participating_user, presence: true
+  validates :participating_users, presence: true
 
   validates :name, :description, presence: true
   validates :name, uniqueness: { case_insensitive: false }
