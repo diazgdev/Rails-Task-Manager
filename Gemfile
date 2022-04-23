@@ -27,6 +27,7 @@ gem 'cocoon'
 gem 'hamlit'
 gem 'rails-i18n'
 gem 'simple_form'
+gem 'net-smtp', require: false
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
