@@ -14,10 +14,12 @@
   = @task.category
 
 .notes-container
-  - @task.notes.each do |note|
-    %p= note.body
-  = simple_form_for Note.new, url: task_notes_path(task_id: @task.id) do |f|
-    = f.input :body, label: false, as: :string, placeholder: 'Escribe tu nota', input_html: { autocomplete: :off }
+  .notes
+    - @task.notes.each do |note|
+      = render 'tasks/notes/note.html.haml', note: note
+  - if can? :create, @task
+    = simple_form_for Note.new, url: task_notes_path(task_id: @task.id), remote: true do |f|
+      = f.input :body, label: false, as: :string, placeholder: 'Escribe tu nota', input_html: { autocomplete: :off }
 
 = link_to 'Edit', edit_task_path(@task)
 \|

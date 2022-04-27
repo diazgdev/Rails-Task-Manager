@@ -1,0 +1,12 @@
+<%- if @note.persisted? %>
+  var parentNode = document.querySelector(".notes-container .notes")
+  var newElement = document.createElement("div")
+  newElement.classList.add('single-note');
+  newElement.innerHTML = " <%= j render 'tasks/notes/note', note: @note %> "
+  parentNode.appendChild(newElement)
+  document.getElementById("note_body").value = "";
+  window.scrollTo({
+    top: window.innerHeight,
+    behavior: "smooth"
+  });
+<% end %>
